@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from '../components/Home';
+import Search from '../components/Search';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
+  const REDIRECT_URI = "http://localhost:5173/";
+  const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
+  const RESPONSE_TYPE = "token";
+
+  const [token, setToken] = useState("");
+  const [selectedSong, setSelectedSong] = useState(null);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    let token = window.localStorage.getItem("token");
+
+    if (!token && hash) {
+      token = hash
+        .substring(1)
+        .split("&")
+        .find((elem) => elem.startsWith("access_token"))
+        .split("=")[1];
+
+      window.location.hash = "";
+      window.localStorage.setItem("token", token);
+      setToken(token);
+    } else if (token) {
+      setToken(token);
+    }
+  }, []);
+
+  const logout = () => {
+    setToken("");
+    window.localStorage.removeItem("token");
+    setSelectedSong(null);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          {!token ? (
+            <a
+              href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
+            >
+              Login to Spotify
+            </a>
+          ) : (
+            <>
+              <button onClick={logout}>Logout</button>
+              <nav>
+                <Link to="/">Home</Link> | <Link to="/search">Search</Link>
+              </nav>
+            </>
+          )}
+        </header>
+        <Routes>
+          <Route path="/" element={<Home selectedSong={selectedSong} />} />
+          <Route path="/search" element={<Search token={token} setSelectedSong={setSelectedSong} />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
