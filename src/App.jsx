@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from '../components/Home';
 import Search from '../components/Search';
+import About from './About.jsx'; // Importing the About component
 import './App.css';
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
     <Router>
       <div className="bg-black w-full min-h-screen p-0">
         <header className="w-full h-[10vw] flex flex-row justify-end items-center gap-[4%]">
-          <div className="font-rebond font-normal text-center text-white text-[27px]">about</div>
+          <Route path="/about" className="font-rebond font-normal text-center text-white text-[27px]">About</Route> 
           <div className="font-rebond font-normal text-center text-white text-[27px] mr-[5%]">meet the team</div>
         </header>
         <div className="flex flex-row border-2 border-green-500">
@@ -59,13 +60,12 @@ function App() {
             </p>
             <div className="inline-block mt-[90px]">
               {!token ? (
-                
                 <a
-                href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
-                className="w-[350px] h-14 rounded-[50.87px] border-[0.68px] border-solid border-[#d9d9d9] font-rebond font-normal text-black text-[18.3px] tracking-[0] leading-[normal] whitespace-nowrap flex justify-center items-center text-white"
-              >
-                Log In with Spotify
-              </a>          
+                  href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
+                  className="w-[350px] h-14 rounded-[50.87px] border-[0.68px] border-solid border-[#d9d9d9] font-rebond font-normal text-black text-[18.3px] tracking-[0] leading-[normal] whitespace-nowrap flex justify-center items-center text-white"
+                >
+                  Log In with Spotify
+                </a>
               ) : (
                 <>
                   <button onClick={logout}>Logout</button>
@@ -79,9 +79,8 @@ function App() {
           <div className="w-full flex flex-col items-center justify-center border-2 border-red-500 m-0">
             <div 
               className="border-2 border-yellow-500 w-full h-1/3"
-              >
+            >
               <div className="bg-url[('')] bg-cover bg-center border-2 border-orange-500">
-
               </div>
             </div>
             <div className="border-2 border-blue-500 w-full h-2/3"></div>

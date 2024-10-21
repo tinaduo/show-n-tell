@@ -1,0 +1,8 @@
+/* App.css or About.css */
+.about-container {
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background color */
+    color: #333; /* Dark text color */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px; /* Margin around the container */
+}
