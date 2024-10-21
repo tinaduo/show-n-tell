@@ -42,44 +42,37 @@ function App() {
     <Router>
       <div className="bg-black w-full min-h-screen p-0">
         <header className="w-full h-[10vw] flex flex-row justify-end items-center gap-[4%]">
-          <div className="font-rebond font-normal text-center text-white text-[27px]">about</div>
           <div className="font-rebond font-normal text-center text-white text-[27px] mr-[5%]">meet the team</div>
         </header>
         <div className="flex flex-row border-2 border-green-500">
           <div className="inline-block ml-[190px] mt-[350px]">
-            <div className="w-72 h-[62px]">
-              <div className="font-rebond font-normal text-white text-[54.3px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
-                show n' tell.
-              </div>
-            </div>
-            <p className="font-rebond font-normal text-white text-lg tracking-[0] leading-[normal] w-4/5 mt-5">
-              A personal space to share what makes you, you. Curate your favorite
-              songs, movies, books, and memories, and show off your unique collection.
-              Start building your shelf today.
-            </p>
+            <Routes>
+              <Route path="/" element={<Home selectedSong={selectedSong} />} />
+              <Route path="/search" element={<Search token={token} setSelectedSong={setSelectedSong} />} />
+            </Routes>
             <div className="inline-block mt-[90px]">
               {!token ? (
-                
+
                 <a
-                href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
-                className="w-[350px] h-14 rounded-[50.87px] border-[0.68px] border-solid border-[#d9d9d9] font-rebond font-normal text-black text-[18.3px] tracking-[0] leading-[normal] whitespace-nowrap flex justify-center items-center text-white"
-              >
-                Log In with Spotify
-              </a>          
+                  href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
+                  className="w-[350px] h-14 rounded-[50.87px] border-[0.68px] border-solid border-[#d9d9d9] font-rebond font-normal text-black text-[18.3px] tracking-[0] leading-[normal] whitespace-nowrap flex justify-center items-center text-white"
+                >
+                  Log In with Spotify
+                </a>
               ) : (
                 <>
-                  <button onClick={logout}>Logout</button>
-                  <nav>
-                    <Link to="/">Home</Link> | <Link to="/search">Search</Link>
+                  <button className="text-white" onClick={logout}>Logout</button>
+                  <nav className="text-white">
+                    <Link to="/">Home</Link> | <Link to="/search">Search</Link> | <Link to="/about">About</Link>
                   </nav>
                 </>
               )}
             </div>
           </div>
           <div className="w-full flex flex-col items-center justify-center border-2 border-red-500 m-0">
-            <div 
+            <div
               className="border-2 border-yellow-500 w-full h-1/3"
-              >
+            >
               <div className="bg-url[('')] bg-cover bg-center border-2 border-orange-500">
 
               </div>
@@ -87,11 +80,6 @@ function App() {
             <div className="border-2 border-blue-500 w-full h-2/3"></div>
           </div>
         </div>
-        
-        <Routes>
-          <Route path="/" element={<Home selectedSong={selectedSong} />} />
-          <Route path="/search" element={<Search token={token} setSelectedSong={setSelectedSong} />} />
-        </Routes>
       </div>
     </Router>
   );
