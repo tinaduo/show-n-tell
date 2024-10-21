@@ -1,9 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+module.exports = {
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        shadow: "var(--shadow)",
+      },
+      fontFamily: {
+        rebond: ['ES_Rebond_Grotesque_TRIAL-Semibold', 'Helvetica', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
-}
-
+};
