@@ -4,6 +4,8 @@ import Home from '../components/Home';
 import Search from '../components/Search';
 import './App.css';
 import About from './About';
+import Team from './Team';
+import TinaDuong from '../components/TinaDuong';
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
@@ -50,6 +52,10 @@ function App() {
         </div>
       </nav>
       <Routes>
+        <Route path="/meet-the-team" element={<Team />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/team/tina-duong" element={<TinaDuong />} />
         <Route className='text-white' path="/" element={<Home selectedSong={selectedSong} />} />
         <Route className='text-white' path="/about" element={<About />} />
         <Route className='text-white' path="/search" element={<Search token={token} setSelectedSong={setSelectedSong} />} />

@@ -1,4 +1,3 @@
-// AboutTitle.jsx
 import React from 'react';
 
 const AboutTitle = () => {
