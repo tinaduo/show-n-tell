@@ -42,18 +42,33 @@ function App() {
   return (
     <Router>
       <nav className="flex justify-between p-4 bg-black text-white border-none">
-        <div className="text-2xl font-bold">show n' tell.</div>
+        <Link className='text-white text-2xl font-bold' to="/">show n' tell</Link>
         <div className="space-x-4">
-          <Link to="/about" >about</Link>
-          <Link to="/meet-the-team">meet the team</Link>
+          <nav>
+            <Link className='text-white' to="/search">Search</Link> | <Link to="/about">About</Link> | <Link to="/meet-the-team"> Meet the Team </Link>
+          </nav>
         </div>
       </nav>
-
       <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
+        <Route className='text-white' path="/" element={<Home selectedSong={selectedSong} />} />
+        <Route className='text-white' path="/about" element={<About />} />
+        <Route className='text-white' path="/search" element={<Search token={token} setSelectedSong={setSelectedSong} />} />
       </Routes>
+      {!token ? (
+        <a
+          href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
+          className='text-white'
+        >
+          Login to Spotify
+        </a>
+      ) : (
+        <>
+          <button
+            onClick={logout}
+            className='text-white'
+          >Logout</button>
+        </>
+      )}
     </Router>
   );
 }
