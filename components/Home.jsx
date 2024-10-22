@@ -15,8 +15,10 @@ function Home({ selectedSong }) {
       </p>
       {selectedSong && (
         <div>
-          <img src={selectedSong.image} alt={selectedSong.title} width="100" />
-          <p>{selectedSong.title}</p>
+          <img 
+            className='text-white'
+            src={selectedSong.image} alt={selectedSong.title} width="100" />
+          <p className='text-white' >{selectedSong.title}</p>
         </div>
       )}
     </div>
