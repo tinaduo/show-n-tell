@@ -38,7 +38,7 @@ const ChelseaWoo = () => {
             Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.
           </p>
         </div>
-         <FriendsShelves />
+        <FriendsShelves />
       </div>
 
       <div className="flex-grow">

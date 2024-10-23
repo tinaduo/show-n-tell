@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 function Search({ token, setSelectedSong }) {
     const [searchTerm, setSearchTerm] = useState("");
+    
     const [results, setResults] = useState([]);
     const navigate = useNavigate();
 
     const handleSearch = async (e) => {
         e.preventDefault();
         const searchEndpoint = `https://api.spotify.com/v1/search?q=${searchTerm}&type=track`;
-
+        let token = window.localStorage.getItem("token");
         const response = await fetch(searchEndpoint, {
             headers: {
                 Authorization: `Bearer ${token}`,
