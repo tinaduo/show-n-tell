@@ -32,7 +32,6 @@ function App() {
       setToken(token);
     } else if (token) {
       setToken(token);
-      let token = window.localStorage.getItem("token");
     }
   }, []);
 
