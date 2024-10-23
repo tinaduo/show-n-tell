@@ -21,3 +21,7 @@
       0
     ), 2137px 1956px 811px 0px rgba(0, 0, 0, 0);
 }
+
+html, * {
+  background-color: black;
+}

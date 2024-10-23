@@ -29,22 +29,24 @@ function Search({ token, setSelectedSong }) {
     };
 
     return (
-        <div>
-            <h2>song search</h2>
-            <form onSubmit={handleSearch}>
+        <div className='text-white'>
+            <h2 className='text-white'>song search</h2>
+            <form 
+                className='text-white'
+                onSubmit={handleSearch}>
                 <input
                     type="text"
                     placeholder="search for a song"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button type="submit">search</button>
+                <button className='text-white' type="submit">search</button>
             </form>
             <div>
                 {results.map((track) => (
-                    <div key={track.id} onClick={() => handleSongClick(track)} style={{ cursor: 'pointer' }}>
+                    <div className='text-white' key={track.id} onClick={() => handleSongClick(track)} style={{ cursor: 'pointer' }}>
                         <img src={track.album.images[0]?.url} alt={track.name} width="50" />
-                        <p>{track.name} by {track.artists[0].name}</p>
+                        <p className='text-white'>{track.name} by {track.artists[0].name}</p>
                     </div>
                 ))}
             </div>
