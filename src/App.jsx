@@ -53,7 +53,6 @@ function App() {
       </nav>
       <Routes>
         <Route path="/meet-the-team" element={<Team />} />
-        <Route path="/" element={<Home />} />
         <Route path="/team/tina-duong" element={<TinaDuong />} />
         <Route className='text-white' path="/" element={<Home selectedSong={selectedSong} />} />
         <Route className='text-white' path="/about" element={<About />} />
