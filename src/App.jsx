@@ -6,6 +6,8 @@ import './App.css';
 import About from './About';
 import Team from './Team';
 import TinaDuong from '../components/TinaDuong';
+import ChelseaWoo from '../components/ChelseaWoo';
+import KeonaAguilar from '../components/KeonaAguilar';
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
