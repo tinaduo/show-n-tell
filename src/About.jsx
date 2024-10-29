@@ -4,7 +4,7 @@ import AboutDescription from '../components/AboutDescription';
 import ImageGrid from '../components/ImageGrid';
 
 const About = () => {
-    // Define the images with custom src and alt
+
     const images = [
       {
         src: 'https://d3p3fw3rutb1if.cloudfront.net/photos/9ac1f1ef-e24d-4f04-b3e5-f9ddb07e1afa',
@@ -35,7 +35,6 @@ const About = () => {
           <AboutDescription />
         </div>
   
-        {/* Pass the custom images array to ImageGrid */}
         <ImageGrid images={images} />
       </div>
     );
