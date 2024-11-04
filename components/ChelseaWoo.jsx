@@ -1,6 +1,5 @@
 import React from 'react';
 import ImageGrid from './ImageGrid';
-import FriendsShelves from './FriendsShelves'
 
 const ChelseaWoo = () => {
   const images = [
@@ -27,9 +26,13 @@ const ChelseaWoo = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between p-8 bg-black text-white min-h-screen font-rebond">
+    <div className="flex flex-col md:flex-row items-start justify-between bg-black text-white font-rebond">
       <div className="flex flex-col items-start w-1/3 pl-[-30px]">
-        <div className="border-2 border-gray-300 w-32 h-32 rounded-xl mb-4"></div>
+        <img
+          src="../src/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg"
+          className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
+        >
+        </img>
         <h1 className="text-xl mb-1">Chelsea Woo</h1>
         <p className="text-sm text-gray-400 mb-4">@chelsanity</p>
         <div className="mt-3">
@@ -38,7 +41,6 @@ const ChelseaWoo = () => {
             Korem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.
           </p>
         </div>
-        <FriendsShelves />
       </div>
 
       <div className="flex-grow">
