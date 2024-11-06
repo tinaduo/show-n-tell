@@ -26,10 +26,10 @@ const About = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-end justify-between bg-black text-white">
+    <div className="flex flex-row items-end justify-between bg-black text-white">
       <div className="flex flex-col font-rebond">
-        <h1 className="text-4xl font-bold mb-4">about!</h1>
-        <p className="text-sm mb-8 text-left mr-12 max-w-2xl">
+        <h1 className="text-4xl font-bold mb-4">About!</h1>
+        <p className="font-rebond font-normal text-white text-sm w-96 mt-5">
           Show n' Tell is a personal, interactive platform where you can
           showcase what makes you, you. Whether it’s your favourite songs,
           cherished memories, or sentimental items, Show n' Tell offers a space

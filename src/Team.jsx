@@ -1,28 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+const teamMembers = [
+  {
+    name: "Tina Duong",
+    link: "/team/tina-duong",
+    imgSrc: "../src/images/tina/IMG_4954.jpg",
+  },
+  {
+    name: "Chelsea Woo",
+    link: "/team/chelsea-woo",
+    imgSrc: "../src/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg",
+  },
+  {
+    name: "Keona Aguilar",
+    link: "/team/keona-aguilar",
+    imgSrc: "../src/images/keona/IMG_3948.jpg",
+  },
+];
 
 const Team = () => {
   return (
-    <div className="flex flex-col items-start p-8 bg-black text-white min-h-screen">
-      <h1 className="text-4xl font-rebond mb-9">Meet the Team!</h1>
-      <div className="flex flex-row justify-between">
-
-        <Link to="/team/tina-duong" className="flex flex-col items-center">
-          <div className="w-60 h-52 border-2 border-gray-300 rounded-xl mb-2"></div>
-          <p className="text-lg text-left pt-5">Tina Duong</p>
-        </Link>
-
-        <Link to="/team/chelsea-woo" className="flex flex-col items-center">
-          <div className="w-60 h-52 border-2 border-gray-300 rounded-xl mb-"></div>
-          <p className="text-lg pt-5">Chelsea Woo</p>
-        </Link>
-
-        <Link to="/team/keona-aguilar" className="flex flex-col items-center">
-          <div className="w-60 h-52 border-2 border-gray-300 rounded-xl mb-"></div>
-          <p className="text-lg pt-5">Keona Aguilar</p>
-        </Link>
-        </div>
+    <div className="flex flex-col h-fit bg-black text-white">
+      <h1 className="text-4xl font-rebond mb-9 text-center md:text-left">Meet the Team!</h1>
+      <div className="flex flex-col md:flex-row md:justify-between lg:justify-between">
+        {teamMembers.map((member) => (
+          <Link to={member.link} className="flex flex-col items-center" key={member.name}>
+            <img
+              className=" w-60 h-52 border-2 border-gray-300 rounded-xl object-cover"
+              src={member.imgSrc}
+              alt={member.name}
+            />
+            <p className="text-lg py-4">{member.name}</p>
+          </Link>
+        ))}
       </div>
+    </div>
   );
 };
 

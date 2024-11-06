@@ -15,3 +15,4 @@ const ImageCard = ({ src, alt, caption, width, height }) => {
 };
 
 export default ImageCard;
+

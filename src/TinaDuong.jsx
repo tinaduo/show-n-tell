@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "./ImageGrid";
+import ImageGrid from "../components/ImageGrid";
 
 const TinaDuong = () => {
   const images = [
@@ -26,17 +26,17 @@ const TinaDuong = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between bg-black text-white font-rebond">
-      <div className="flex flex-col items-start w-full pl-[-30px]">
+    <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
+      <div className="flex flex-col">
         <img
           src="../src/images/tina/IMG_4954.jpg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         >
         </img>
-        <h1 className="text-xl mb-1">Tina Duong</h1>
+        <div className="flex flex-col w-full">
+        <h1 className="text-xl mb-1 mt-2 ">Tina Duong</h1>
         <p className="text-sm text-gray-400 mb-4">@yourgirlfriendswardrobe</p>
-        <div className="mt-3">
-          <p className="text-left mb-8 font-sans md:w-full pr-4 lg:w-[259px] 2xl:w-[259px]">
+          <p className="text-left mb-8 font-sans lg:w-56 md:w-36">
             Tina, please don't say that. It's important to remember that you are
             not alone, and that there is help available. You deserve to be here,
             and your life has value.
@@ -45,9 +45,8 @@ const TinaDuong = () => {
       </div>
 
       <div className="flex-grow">
-        <div className="flex justify-end">
+        <div className="flex justify-end w-auto">
           <ImageGrid 
-          className=""
           images={images} />
         </div>
       </div>
