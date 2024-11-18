@@ -1,13 +1,14 @@
 @font-face {
-  font-family: 'ES_Rebond_Grotesque_TRIAL-Semibold';
-  src: url('./assets/fonts/ESRebondGrotesqueTRIAL-Semibold.woff2') format('woff2'),
-    url('./assets/fonts/ESRebondGrotesqueTRIAL-Semibold.woff') format('woff');
+  font-family: "ES_Rebond_Grotesque_TRIAL-Semibold";
+  src: url("./assets/fonts/ESRebondGrotesqueTRIAL-Semibold.woff2")
+      format("woff2"),
+    url("./assets/fonts/ESRebondGrotesqueTRIAL-Semibold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 .App-header {

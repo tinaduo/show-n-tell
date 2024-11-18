@@ -34,7 +34,7 @@ function Search({ token, setSelectedSong }) {
       <h2 className=" font-rebond text-[32.25px]">
         add a song to your show n’ tell!
       </h2>
-      <p className="w-fit">
+      <p className="w-fit max-w-[650px]">
         What’s that track you can’t stop playing? Whether it’s a song that lifts
         your spirits, helps you focus, or brings back memories, find it here.
         Search for your favorite tune and add it to your shelf to share a part

@@ -83,7 +83,7 @@ function App() {
         {!token ? (
           <a
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}
-            className="text-white p-4 border-white border-2 rounded-full mt-12"
+            className="text-white p-4 border-white border-2 rounded-full mt-12 max-w-60"
           >
             Login to Spotify →
           </a>
@@ -124,7 +124,7 @@ function App() {
                     to="/profile"
                     className="text-white font-sans hover:underline"
                   >
-                    profile
+                    your shelf
                   </Link>
                 </li>
               </ul>

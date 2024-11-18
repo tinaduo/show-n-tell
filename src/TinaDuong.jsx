@@ -31,12 +31,11 @@ const TinaDuong = () => {
         <img
           src="../src/images/tina/IMG_4954.jpg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
-        >
-        </img>
+        />
         <div className="flex flex-col w-full">
         <h1 className="text-xl mb-1 mt-2 ">Tina Duong</h1>
         <p className="text-sm text-gray-400 mb-4">@yourgirlfriendswardrobe</p>
-          <p className="text-left mb-8 font-sans lg:w-56 md:w-36">
+          <p className="text-left mb-8 font-sans lg:w-56 md:w-36 max-w-[452px]">
             Tina, please don't say that. It's important to remember that you are
             not alone, and that there is help available. You deserve to be here,
             and your life has value.

@@ -1,26 +1,6 @@
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .all-\[unset\] {
-    all: unset;
-  }
-}
-
-:root {
-  --shadow:
-    85px 78px 255px 0px rgba(0, 0, 0, 0.02), 342px 313px 464px 0px rgba(
-      0,
-      0,
-      0,
-      0.02
-    ), 769px 704px 626px 0px rgba(0, 0, 0, 0.01), 1368px 1252px 742px 0px rgba(
-      0,
-      0,
-      0,
-      0
-    ), 2137px 1956px 811px 0px rgba(0, 0, 0, 0);
-}
+@tailwind base;
 
 html, * {
   background-color: black;
