@@ -39,8 +39,7 @@ const About = () => {
           through shared experiences, discover new favourites, and celebrate the
           little things that bring joy to your day.
         </p>
-      </div>
-
+    </div>
       <ImageGrid images={images} />
     </div>
   );
