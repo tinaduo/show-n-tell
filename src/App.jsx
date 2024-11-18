@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home";
-import Profile from "./profile";
 import Search from "./Search";
 import "./App.css";
 import About from "./About";
