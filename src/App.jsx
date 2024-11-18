@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home";
 import Search from "./Search";
 import "./App.css";
+import Profile from "./Profile";
 import About from "./About";
 import Team from "./Team";
 import TinaDuong from "./TinaDuong";
@@ -23,15 +24,17 @@ function App() {
     let token = window.localStorage.getItem("token");
 
     if (!token && hash) {
-      token = hash
+      const tokenFragment = hash
         .substring(1)
         .split("&")
-        .find((elem) => elem.startsWith("access_token"))
-        .split("=")[1];
+        .find((elem) => elem.startsWith("access_token"));
 
-      window.location.hash = "";
-      window.localStorage.setItem("token", token);
-      setToken(token);
+      if (tokenFragment) {
+        token = tokenFragment.split("=")[1];
+        window.location.hash = "";
+        window.localStorage.setItem("token", token);
+        setToken(token);
+      }
     } else if (token) {
       setToken(token);
     }
@@ -39,8 +42,8 @@ function App() {
 
   const logout = () => {
     setToken("");
-    window.localStorage.removeItem("token");
     setSelectedSong(null);
+    window.localStorage.clear(); // clears all cached data
   };
 
   return (
@@ -50,30 +53,29 @@ function App() {
           <Link className="text-white text-2xl font-bold" to="/">
             show n' tell
           </Link>
-          <div className="flex items-center gap-4">
-            <Link to="/about">About</Link>
-            <Link to="/meet-the-team">Meet the Team</Link>
-            <Link to="/search">Search</Link>
-          </div>
+          {token && (
+            <div className="flex items-center gap-4">
+              <Link to="/about">About</Link>
+              <Link to="/meet-the-team">Meet the Team</Link>
+              <Link to="/search">Search</Link>
+            </div>
+          )}
         </nav>
         <Routes>
           <Route
             path="/profile"
             element={<Profile selectedSong={selectedSong} token={token} />}
           />
-          <Route path="/test" element={<Test />} />
           <Route path="/meet-the-team" element={<Team />} />
           <Route path="/team/tina-duong" element={<TinaDuong />} />
           <Route path="/team/keona-aguilar" element={<KeonaAguilar />} />
           <Route path="/team/chelsea-woo" element={<ChelseaWoo />} />
           <Route
-            className="text-white"
             path="/"
             element={<Home selectedSong={selectedSong} />}
           />
-          <Route className="text-white" path="/about" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route
-            className="text-white"
             path="/search"
             element={<Search token={token} setSelectedSong={setSelectedSong} />}
           />
@@ -88,7 +90,7 @@ function App() {
         ) : (
           <>
             <div className="my-12 w-fit">
-              <h2 className="text-2xl font-rebond font-semibold mb-2 text-white">
+              <h2 className="text-2xl font-semibold mb-2 text-white">
                 friends shelves.
               </h2>
               <ul className="list-none">
@@ -116,7 +118,6 @@ function App() {
                     chelsea's shelf
                   </Link>
                 </li>
-                {/* temp */}
                 <li className="mb-2">
                   <Link
                     to="/profile"
