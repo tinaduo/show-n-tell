@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home";
 import Search from "./Search";
 import "./App.css";
+import Profile from "./Profile";
 import About from "./About";
 import Team from "./Team";
 import TinaDuong from "./TinaDuong";
@@ -61,7 +62,6 @@ function App() {
             path="/profile"
             element={<Profile selectedSong={selectedSong} token={token} />}
           />
-          <Route path="/test" element={<Test />} />
           <Route path="/meet-the-team" element={<Team />} />
           <Route path="/team/tina-duong" element={<TinaDuong />} />
           <Route path="/team/keona-aguilar" element={<KeonaAguilar />} />
