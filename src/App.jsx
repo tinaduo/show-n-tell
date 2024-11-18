@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home";
-import Profile from "./profile";
 import Search from "./Search";
 import "./App.css";
 import About from "./About";
@@ -9,7 +8,6 @@ import Team from "./Team";
 import TinaDuong from "./TinaDuong";
 import KeonaAguilar from "./KeonaAguilar";
 import ChelseaWoo from "./ChelseaWoo";
-import Test from "./test";
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
