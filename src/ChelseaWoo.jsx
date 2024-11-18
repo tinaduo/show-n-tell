@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "../components/ImageGrid";
+import ImageGridPlaceholder from "../components/ImageGridPlaceholder";
 
 const ChelseaWoo = () => {
   const images = [
@@ -35,7 +35,7 @@ const ChelseaWoo = () => {
         <div className="flex flex-col w-full">
           <h1 className="text-xl mb-1 mt-2 ">Chelsea Woo</h1>
           <p className="text-sm text-gray-400 mb-4">@chelsanity</p>
-          <p className="text-left mb-8 font-sans lg:w-56 md:w-36 max-w-[452px]">
+          <p className="text-left mb-8 font-sans lg:w-56 md:w-36 w-[452px]">
             damn right.
           </p>
         </div>
@@ -43,7 +43,7 @@ const ChelseaWoo = () => {
 
       <div className="flex-grow">
         <div className="flex justify-end w-auto">
-          <ImageGrid images={images} />
+          <ImageGridPlaceholder images={images} />
         </div>
       </div>
     </div>

@@ -57,7 +57,6 @@ function App() {
             <div className="flex items-center gap-4">
               <Link to="/about">About</Link>
               <Link to="/meet-the-team">Meet the Team</Link>
-              <Link to="/search">Search</Link>
             </div>
           )}
         </nav>
@@ -72,7 +71,7 @@ function App() {
           <Route path="/team/chelsea-woo" element={<ChelseaWoo />} />
           <Route
             path="/"
-            element={<Home selectedSong={selectedSong} />}
+            element={<Home/>}
           />
           <Route path="/about" element={<About />} />
           <Route

@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "../components/ImageGrid";
+import ImageGridPlaceholder from "../components/ImageGridPlaceholder";
 
 const TinaDuong = () => {
   const images = [
@@ -8,8 +8,9 @@ const TinaDuong = () => {
       alt: "Favourite Place",
     },
     {
-      src: "https://i.scdn.co/image/ab67616d00001e0287ec4ada08a3b16aba598bd6",
-      caption: "THAT AIN'T LIFE",
+      src: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02057d046c6dfb348e0215567c",
+      caption: "blackbirds",
+      textColor:"black",
     },
     {
       src: "../src/images/tina/IMG_4968.png",
@@ -45,7 +46,7 @@ const TinaDuong = () => {
 
       <div className="flex-grow">
         <div className="flex justify-end w-auto">
-          <ImageGrid 
+          <ImageGridPlaceholder 
           images={images} />
         </div>
       </div>

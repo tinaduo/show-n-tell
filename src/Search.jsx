@@ -78,6 +78,3 @@ function Search({ token, setSelectedSong }) {
 }
 
 export default Search;
-
-
-// h-[191px] w-[191px] 

@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const ImageCard = ({ src, alt, caption, width, height }) => {
+const ImageCard = ({
+    src,
+    alt,
+    caption,
+    width,
+    height,
+    onClick,
+    textColor = "white",
+}) => {
+
+    const [isLoaded, setIsLoaded] = useState(false);
+
     return (
         <div className="relative overflow-hidden">
-            <img 
-                src={src} 
-                alt={alt} 
-                className="object-cover rounded-xl hove:scale-105"
+            <img
+                src={src}
+                alt={alt}
+                caption={caption}
+                className={`object-cover rounded-xl ${isLoaded ? "" : "border"}`}
                 style={{ width: `${width}px`, height: `${height}px` }}
+                onLoad={() => setIsLoaded(true)}
+                onError={() => setIsLoaded(false)}
+                onClick={onClick}
             />
-            <span className="text-white absolute bottom-2 left-2 bg-gray-500 bg-opacity-50 bg-gradient-to-br from-[#efefef]/5 to-white/5 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-rebond">{caption}</span>
+            <span
+                style={{ color: textColor }}
+                className="absolute bottom-2 left-2 py-1 px-2 bg-gray-500 rounded-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 justify-center font-sans text-xs"
+            >
+                {caption}
+            </span>
         </div>
     );
 };
 
 export default ImageCard;
-
