@@ -23,7 +23,7 @@ const ImageGrid = ({ images, selectedSong }) => {
           />
         </div>
         {/* img music  use selectedSong if its selected, if not it uses images[1] */}
-        <div className="col-start-4 row-start-1 col-span-2 row-span-2">
+        <div className="col-start-4 row-start-1 col-span-2 row-span-2 cursor-pointer">
           <ImageCard
             src={selectedSong ? selectedSong.image : images[1].src}
             alt={selectedSong ? selectedSong.title : images[1].alt}
