@@ -49,13 +49,12 @@ function Search({ token, setSelectedSong }) {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
-      <div className="flex flex-row flex-wrap gap-[50px] justify-between justify-items-start">
+      <div className="flex flex-row flex-wrap gap-[50px] justify-between justify-items-start cursor-pointer">
         {results.map((track) => (
           <div
             className="text-xl font-semibold font-rebond"
             key={track.id}
             onClick={() => handleSongClick(track)}
-            style={{ cursor: "pointer" }}
           >
             <div className="flex flex-col font-rebond">
               <img

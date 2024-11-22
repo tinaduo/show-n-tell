@@ -6,11 +6,9 @@ export default function UploadButton() {
   };
 
   return (
-    <div className="flex rounded-[10px] border border-[#a0a0a0] p-28 mt-8">
+    <div className="flex rounded-[10px] border border-[#a0a0a0] p-28 mt-8 cursor-pointer">
       <div
-        className="flex flex-col w-full items-center
-      "
-        style={{ cursor: "pointer" }}
+        className="flex flex-col w-full items-center"
       >
         <input
           type="file"
