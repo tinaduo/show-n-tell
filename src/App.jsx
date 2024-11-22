@@ -12,7 +12,7 @@ import ChelseaWoo from "./ChelseaWoo";
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
-  const REDIRECT_URI = "http://localhost:5173/Profile";
+  const REDIRECT_URI = "https://show-n-tell.vercel.app/Profile";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
