@@ -12,7 +12,7 @@ import ChelseaWoo from "./ChelseaWoo";
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
-  const REDIRECT_URI = "http://localhost:5173/Profile";
+  const REDIRECT_URI = "https://show-n-tell.vercel.app/Profile";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
@@ -57,7 +57,6 @@ function App() {
             <div className="flex items-center gap-4">
               <Link to="/about">About</Link>
               <Link to="/meet-the-team">Meet the Team</Link>
-              <Link to="/search">Search</Link>
             </div>
           )}
         </nav>
@@ -72,7 +71,7 @@ function App() {
           <Route path="/team/chelsea-woo" element={<ChelseaWoo />} />
           <Route
             path="/"
-            element={<Home selectedSong={selectedSong} />}
+            element={<Home/>}
           />
           <Route path="/about" element={<About />} />
           <Route

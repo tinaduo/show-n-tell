@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "../components/ImageGrid";
+import ImageGridPlaceholder from "../components/ImageGridPlaceholder";
 
 function Home({ selectedSong }) {
   const images = [
@@ -9,7 +9,7 @@ function Home({ selectedSong }) {
     },
     {
       src: "https://media.pitchfork.com/photos/599b0343d7cfca73eb7c50d5/master/pass/freudian_daniel%20caesar.jpg",
-      caption: "favorite song",
+      caption: "Best Part (Ft. H.E.R.)",
     },
     {
       src: "https://i.pinimg.com/736x/c2/85/06/c285063bd1b122596fcac36b69f6c9b2.jpg",
@@ -43,7 +43,7 @@ function Home({ selectedSong }) {
           </div>
         </div>
         <div className="flex flex-row justify-between">
-          <ImageGrid images={images} selectedSong={selectedSong} />
+          <ImageGridPlaceholder images={images} selectedSong={selectedSong} />
         </div>
       </div>
     </div>

@@ -70,7 +70,7 @@ function Profile({ selectedSong, token }) {
             @{spotifyProfile?.display_name} {/* username */}
           </p>
           <div className="mt-3">
-            <p className="text-left mb-8 font-sans md:w-[259px] pr-4 lg:w-[259px] 2xl:w-[259px]">
+            <p className="text-left mb-8 font-sans md:w-[259px] pr-4 lg:w-[259px] 2xl:w-[259px] w-[452px]">
               hello i am {spotifyProfile?.display_name} and i am a cool person! {/* description */}
             </p>
           </div>
