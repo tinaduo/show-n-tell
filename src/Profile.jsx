@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import ImageGrid from "../components/ImageGrid";
 
-function Profile({ selectedSong, token }) {
+function Profile({ selectedSong, selectedPlace, token }) {
   const [spotifyProfile, setSpotifyProfile] = useState(null);
   const images = [
     {
@@ -78,7 +78,10 @@ function Profile({ selectedSong, token }) {
       </div>
       <div className="flex-grow">
         <div className="flex justify-end">
-          <ImageGrid images={images} selectedSong={selectedSong} />
+          <ImageGrid 
+            images={images} 
+            selectedSong={selectedSong} 
+            selectedPlace={selectedPlace} />
         </div>
       </div>
     </div>

@@ -27,14 +27,14 @@ function Home({ selectedSong }) {
 
   return (
     <div>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between text-white font-rebond sm:items-center md:items-end">
         <div className="flex flex-col">
           <div className="flex justify-end items-end h-full">
             <div className="flex flex-col font-rebond">
-              <h1 className="text-4xl font-bold text-white mb-4">
-                show n' tell
+              <h1 className="text-[54.258px] font-bold text-white">
+                show n' tell.
               </h1>
-              <p className="font-rebond font-normal text-white text-lg w-96 mt-5">
+              <p className="font-rebond font-normal text-white text-[18px]  max-w-[554px] mt-5 lg:mb-0 mb-5">
                 A personal space to share what makes you, you. Curate your
                 favorite songs, movies, books, and memories, and show off your
                 unique collection. Start building your shelf today.
@@ -42,8 +42,10 @@ function Home({ selectedSong }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-grow justify-end">
+        <div className="flex justify-end w-auto">
           <ImageGridPlaceholder images={images} selectedSong={selectedSong} />
+        </div>
         </div>
       </div>
     </div>

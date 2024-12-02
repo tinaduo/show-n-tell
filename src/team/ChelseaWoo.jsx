@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGridPlaceholder from "../components/ImageGridPlaceholder";
+import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 
 const ChelseaWoo = () => {
   const images = [

@@ -6,17 +6,23 @@ import "./App.css";
 import Profile from "./Profile";
 import About from "./About";
 import Team from "./Team";
-import TinaDuong from "./TinaDuong";
-import KeonaAguilar from "./KeonaAguilar";
-import ChelseaWoo from "./ChelseaWoo";
+import TinaDuong from "./team/TinaDuong";
+import KeonaAguilar from "./team/KeonaAguilar";
+import ChelseaWoo from "./team/ChelseaWoo";
+import Place from "./create/Place";
+import Food from "./create/Food";
+import KnickKnacks from "./create/KnickKnacks";
+import Movie from "./create/Movie";
+
 
 function App() {
   const CLIENT_ID = "baeaf44412344a248f5309bbc2bcf6c1";
-  const REDIRECT_URI = "https://show-n-tell.vercel.app/";
+  const REDIRECT_URI = "http://localhost:5173/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
   const [token, setToken] = useState("");
+  const [selectedPlace, setSelectedPlace] = useState(null);
   const [selectedSong, setSelectedSong] = useState(null);
 
   useEffect(() => {
@@ -63,8 +69,9 @@ function App() {
         <Routes>
           <Route
             path="/profile"
-            element={<Profile selectedSong={selectedSong} token={token} />}
-          />
+            element={<Profile selectedSong={selectedSong} selectedPlace={selectedPlace} token={token} />}
+          >
+          </Route>
           <Route path="/meet-the-team" element={<Team />} />
           <Route path="/team/tina-duong" element={<TinaDuong />} />
           <Route path="/team/keona-aguilar" element={<KeonaAguilar />} />
@@ -78,6 +85,10 @@ function App() {
             path="/search"
             element={<Search token={token} setSelectedSong={setSelectedSong} />}
           />
+          <Route path="/create/place" element={<Place setSelectedPlace={setSelectedPlace} />} />
+          <Route path="/create/food" element={<Food />}/>
+          <Route path="/create/knick-knacks" element={<KnickKnacks />}/>
+          <Route path="/create/movie" element={<Movie />}/>
         </Routes>
         {!token ? (
           <a

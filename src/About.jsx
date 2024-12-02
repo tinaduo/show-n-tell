@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "../components/ImageGrid";
+import ImageGridPlaceHolder from "../components/ImageGrid";
 
 const About = () => {
   const images = [
@@ -40,7 +40,7 @@ const About = () => {
           little things that bring joy to your day.
         </p>
     </div>
-      <ImageGrid images={images} />
+      <ImageGridPlaceHolder images={images} />
     </div>
   );
 };

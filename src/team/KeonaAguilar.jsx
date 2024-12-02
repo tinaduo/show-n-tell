@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGrid from "../components/ImageGrid";
+import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 
 const KeonaAguilar = () => {
   const images = [
@@ -43,7 +43,7 @@ const KeonaAguilar = () => {
 
       <div className="flex-grow">
         <div className="flex justify-end w-auto">
-          <ImageGrid 
+          <ImageGridPlaceholder 
           images={images} />
         </div>
       </div>
