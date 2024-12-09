@@ -34,7 +34,7 @@ function Home({ selectedSong }) {
               <h1 className="text-[54.258px] font-bold text-white">
                 show n' tell.
               </h1>
-              <p className="font-rebond font-normal text-white text-[18px]  max-w-[554px] mt-5 lg:mb-0 mb-5">
+              <p className="font-rebond font-normal text-white text-[18px] max-w-[554px] mt-5 lg:mb-0 mb-5">
                 A personal space to share what makes you, you. Curate your
                 favorite songs, movies, books, and memories, and show off your
                 unique collection. Start building your shelf today.

@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGridPlaceHolder from "../components/ImageGrid";
+import ImageGridPlaceHolder from "../components/ImageGridPlaceholder";
 
 const About = () => {
   const images = [
@@ -26,10 +26,10 @@ const About = () => {
   ];
 
   return (
-    <div className="flex flex-row items-end justify-between bg-black text-white">
-      <div className="flex flex-col font-rebond">
+    <div className="flex flex-col md:flex-row items-end justify-between text-white font-rebond sm:items-center md:items-end">
+      <div className="flex flex-col">
         <h1 className="text-4xl font-bold mb-4">About!</h1>
-        <p className="font-rebond font-normal text-white text-sm w-96 mt-5">
+        <p className="font-rebond text-pretty font-normal text-white text-sm max-w-[500px] mt-5 lg:mb-0 mb-5">
           Show n' Tell is a personal, interactive platform where you can
           showcase what makes you, you. Whether it’s your favourite songs,
           cherished memories, or sentimental items, Show n' Tell offers a space
@@ -40,7 +40,11 @@ const About = () => {
           little things that bring joy to your day.
         </p>
     </div>
-      <ImageGridPlaceHolder images={images} />
+          <div className="flex-grow">
+        <div className="flex justify-end w-auto">
+      <ImageGridPlaceHolder images={images} /> 
+    </div>
+    </div>
     </div>
   );
 };
