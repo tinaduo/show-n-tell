@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home";
 import Search from "./Search";
-import ".app.css";
+import "./App.css";
 import Profile from "./Profile";
 import About from "./About";
 import Team from "./Team";
