@@ -53,7 +53,7 @@ function App() {
       <Router>
         <nav className="flex justify-between py-8 bg-black text-white border-none w-full">
           <Link className="text-white text-2xl font-bold" to="/">
-            show n' tell
+            show n' tell.
           </Link>
           {token && (
             <div className="flex items-center gap-4">
