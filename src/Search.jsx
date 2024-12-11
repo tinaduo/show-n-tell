@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BackIcon from "../components/BackIcon";
 
 function Search({ token, setSelectedSong }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,8 +30,15 @@ function Search({ token, setSelectedSong }) {
     navigate("/profile");
   };
 
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="text-white">
+      <BackIcon
+        onClick={handleBackClick}
+      />
       <h2 className=" font-rebond text-[32.25px]">
         add a song to your show n’ tell!
       </h2>

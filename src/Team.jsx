@@ -5,17 +5,17 @@ const teamMembers = [
   {
     name: "Tina Duong",
     link: "/team/tina-duong",
-    imgSrc: "../src/images/tina/IMG_4954.jpg",
+    imgSrc: "../images/tina/IMG_4954.jpg",
   },
   {
     name: "Chelsea Woo",
     link: "/team/chelsea-woo",
-    imgSrc: "../src/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg",
+    imgSrc: "../images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg",
   },
   {
     name: "Keona Aguilar",
     link: "/team/keona-aguilar",
-    imgSrc: "../src/images/keona/IMG_3948.jpg",
+    imgSrc: "../images/keona/IMG_3948.jpg",
   },
 ];
 
