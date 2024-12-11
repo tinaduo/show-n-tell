@@ -7,8 +7,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "dmSans";
+  src: url("./assets/fonts/dmSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Helvetica", sans-serif;
+  font-family: "dmSans", sans-serif;
 }
 
 .App-header {
