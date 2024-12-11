@@ -52,7 +52,7 @@ function App() {
     <div className="flex flex-col h-full px-8 md:px-16 font-dmSans">
       <Router>
         <nav className="flex justify-between py-8 bg-black text-white border-none w-full">
-          <Link className="text-white text-2xl font-bold" to="/">
+          <Link className="text-white font-rebond text-2xl font-bold" to="/">
             show n' tell.
           </Link>
           {token && (
