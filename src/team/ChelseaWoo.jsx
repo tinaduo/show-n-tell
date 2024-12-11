@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const ChelseaWoo = () => {
   const images = [
     {
-      src: "../src/images/chelsea/FavPlace.jpeg",
+      src: "../src/assets/images/chelsea/FavPlace.jpeg",
       alt: "Favourite Place",
     },
     {
@@ -12,15 +12,15 @@ const ChelseaWoo = () => {
       caption: "Just Like Heaven",
     },
     {
-      src: "../src/images/chelsea/JBLRED.png",
+      src: "../src/assets/images/chelsea/JBLRED.png",
       alt: "knick-knacks",
     },
     {
-      src: "../src/images/chelsea/FavMovie.jpg",
+      src: "../src/assets/images/chelsea/FavMovie.jpg",
       alt: "movie",
     },
     {
-      src: "../src/images/chelsea/FavFood.JPG",
+      src: "../src/assets/images/chelsea/FavFood.JPG",
       alt: "food",
     },
   ];

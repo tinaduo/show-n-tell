@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const TinaDuong = () => {
   const images = [
     {
-      src: "../src/images/tina/IMG_1387.jpg",
+      src: "../src/assets/images/tina/IMG_1387.jpg",
       alt: "Favourite Place",
     },
     {
@@ -13,7 +13,7 @@ const TinaDuong = () => {
       textColor:"black",
     },
     {
-      src: "../src/images/tina/IMG_4968.png",
+      src: "../src/assets/images/tina/IMG_4968.png",
       alt: "knick-knacks",
     },
     {
@@ -21,7 +21,7 @@ const TinaDuong = () => {
       alt: "Favourite Movie",
     },
     {
-      src: "../src/images/tina/IMG_4046.jpg",
+      src: "../src/assets/images/tina/IMG_4046.jpg",
       alt: "Favourite Food",
     },
   ];

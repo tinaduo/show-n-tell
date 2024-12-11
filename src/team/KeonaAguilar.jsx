@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const KeonaAguilar = () => {
   const images = [
     {
-      src: "../src/images/keona/favPlace.jpg",
+      src: "../src/assets/images/keona/favPlace.jpg",
       alt: "Favourite Place",
     },
     {
@@ -12,15 +12,15 @@ const KeonaAguilar = () => {
       caption: "Best Part",
     },
     {
-      src: "../src/images/keona/knickKnacks.jpg",
+      src: "../src/assets/images/keona/knickKnacks.jpg",
       alt: "knick-knacks",
     },
     {
-      src: "../src/images/keona/captainAmerica.jpg",
+      src: "../src/assets/images/keona/captainAmerica.jpg",
       alt: "movie",
     },
     {
-      src: " ../src/images/keona/food.jpg",
+      src: " ../src/assets/images/keona/food.jpg",
       alt: "food",
     },
   ];
