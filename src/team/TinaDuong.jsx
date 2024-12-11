@@ -30,7 +30,7 @@ const TinaDuong = () => {
     <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
       <div className="flex flex-col">
         <img
-          src="../src/images/tina/IMG_4954.jpg"
+          src="../src/assets/images/tina/IMG_4954.jpg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         />
         <div className="flex flex-col w-full">

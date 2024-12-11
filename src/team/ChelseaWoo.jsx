@@ -29,7 +29,7 @@ const ChelseaWoo = () => {
     <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
       <div className="flex flex-col">
         <img
-          src="../src/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg"
+          src="../src/assets/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         />
         <div className="flex flex-col w-full">
