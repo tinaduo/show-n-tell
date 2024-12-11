@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const KeonaAguilar = () => {
   const images = [
     {
-      src: "../src/assets/images/keona/favPlace.jpg",
+      src: "/images/keona/favPlace.jpg",
       alt: "Favourite Place",
     },
     {
@@ -12,15 +12,15 @@ const KeonaAguilar = () => {
       caption: "Best Part",
     },
     {
-      src: "../src/assets/images/keona/knickKnacks.jpg",
+      src: "/images/keona/knickKnacks.jpg",
       alt: "knick-knacks",
     },
     {
-      src: "../src/assets/images/keona/captainAmerica.jpg",
+      src: "/images/keona/captainAmerica.jpg",
       alt: "movie",
     },
     {
-      src: " ../src/assets/images/keona/food.jpg",
+      src: "/images/keona/food.jpg",
       alt: "food",
     },
   ];
@@ -29,7 +29,7 @@ const KeonaAguilar = () => {
     <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
       <div className="flex flex-col">
         <img
-          src="../src/assets/images/keona/IMG_3948.jpg"
+          src="/images/keona/IMG_3948.jpg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         />
         <div className="flex flex-col w-full">

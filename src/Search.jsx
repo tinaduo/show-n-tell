@@ -49,10 +49,10 @@ function Search({ token, setSelectedSong }) {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
-      <div className="flex flex-row flex-wrap gap-[50px] justify-between justify-items-start cursor-pointer">
+      <div className="flex flex-row justify-between flex-wrap gap-[50px]">
         {results.map((track) => (
           <div
-            className="text-xl font-semibold font-rebond"
+            className="text-xl font-semibold font-rebond cursor-pointer"
             key={track.id}
             onClick={() => handleSongClick(track)}
           >
@@ -62,9 +62,9 @@ function Search({ token, setSelectedSong }) {
                 src={track.album.images[0]?.url}
                 alt={track.name}
               />
-              <p className="text-3xl lg:w-56 md:w-36 pt-2">
+              <h1 className="text-3xl lg:w-56 md:w-36 pt-2">
                 {track.name}
-              </p>
+              </h1>
               <p className="text-xl lg:w-56 md:w-36 ">
                 {track.artists[0].name}
               </p>

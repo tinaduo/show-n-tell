@@ -91,6 +91,7 @@ function App() {
           <Route path="/create/knick-knacks" element={<KnickKnacks />}/>
           <Route path="/create/movie" element={<Movie />}/>
         </Routes>
+  
         {!token ? (
           <a
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}

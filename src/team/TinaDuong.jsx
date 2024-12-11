@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const TinaDuong = () => {
   const images = [
     {
-      src: "../src/assets/images/tina/IMG_1387.jpg",
+      src: "/images/tina/IMG_1387.jpg",
       alt: "Favourite Place",
     },
     {
@@ -13,7 +13,7 @@ const TinaDuong = () => {
       textColor:"black",
     },
     {
-      src: "../src/assets/images/tina/IMG_4968.png",
+      src: "/images/tina/IMG_4968.png",
       alt: "knick-knacks",
     },
     {
@@ -21,7 +21,7 @@ const TinaDuong = () => {
       alt: "Favourite Movie",
     },
     {
-      src: "../src/assets/images/tina/IMG_4046.jpg",
+      src: "/images/tina/IMG_4046.jpg",
       alt: "Favourite Food",
     },
   ];
@@ -30,7 +30,7 @@ const TinaDuong = () => {
     <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
       <div className="flex flex-col">
         <img
-          src="../src/assets/images/tina/IMG_4954.jpg"
+          src="/images/tina/IMG_4954.jpg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         />
         <div className="flex flex-col w-full">

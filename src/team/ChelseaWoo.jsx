@@ -4,7 +4,7 @@ import ImageGridPlaceholder from "../../components/ImageGridPlaceholder";
 const ChelseaWoo = () => {
   const images = [
     {
-      src: "../src/assets/images/chelsea/FavPlace.jpeg",
+      src: "/images/chelsea/FavPlace.jpeg",
       alt: "Favourite Place",
     },
     {
@@ -12,15 +12,15 @@ const ChelseaWoo = () => {
       caption: "Just Like Heaven",
     },
     {
-      src: "../src/assets/images/chelsea/JBLRED.png",
+      src: "/images/chelsea/JBLRED.png",
       alt: "knick-knacks",
     },
     {
-      src: "../src/assets/images/chelsea/FavMovie.jpg",
+      src: "/images/chelsea/FavMovie.jpg",
       alt: "movie",
     },
     {
-      src: "../src/assets/images/chelsea/FavFood.JPG",
+      src: "/images/chelsea/FavFood.JPG",
       alt: "food",
     },
   ];
@@ -29,7 +29,7 @@ const ChelseaWoo = () => {
     <div className="flex flex-col md:flex-row items-center justify-between text-white font-rebond">
       <div className="flex flex-col">
         <img
-          src="../src/assets/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg"
+          src="/images/chelsea/ab6775700000ee85d575d80ba633f14b5c8b1da6.jpeg"
           className="border-2 border-gray-300 w-32 h-32 rounded-xl object-cover"
         />
         <div className="flex flex-col w-full">
