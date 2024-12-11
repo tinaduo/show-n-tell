@@ -21,9 +21,9 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="flex flex-col h-fit bg-black text-white">
+    <div className="flex flex-col h-full bg-black text-white">
       <h1 className="text-4xl font-rebond mb-9 text-center md:text-left">Meet the Team!</h1>
-      <div className="flex flex-col md:flex-row md:justify-between lg:justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between mt-12 lg:justify-between">
         {teamMembers.map((member) => (
           <Link to={member.link} className="flex flex-col items-center" key={member.name}>
             <img

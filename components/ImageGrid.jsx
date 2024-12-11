@@ -90,8 +90,8 @@ const ImageGrid = ({ images, selectedSong }) => {
         <div className="col-span-3 row-span-2 cursor-pointer">
           {uploadedImages[0] && (
             <ImageCard
-              src={uploadedImages[0].src}
-              alt={uploadedImages[0].alt || "favourite place"}
+              src={uploadedImages[0]?.src}
+              alt={uploadedImages[0]?.alt}
               caption="favourite place"
               width={310}
               height={130}

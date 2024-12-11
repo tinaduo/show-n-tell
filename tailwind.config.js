@@ -8,6 +8,7 @@ module.exports = {
       },
       fontFamily: {
         rebond: ['ES_Rebond_Grotesque_TRIAL-Semibold', 'Helvetica', 'sans-serif'],
+        dmSans: ['DM Sans', 'sans-serif'],
       },
     },
   },
